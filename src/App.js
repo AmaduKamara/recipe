@@ -29,7 +29,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-      <h1>Ninja Cooking</h1>
     </div>
   );
 }
