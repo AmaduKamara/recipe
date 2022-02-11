@@ -7,11 +7,13 @@ import Recipe from "./pages/recipe/Recipe";
 
 // Styles
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Navbar />
         <Switch>
           <Route path="/" exact>
             <Home />
