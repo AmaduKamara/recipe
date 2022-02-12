@@ -7,10 +7,16 @@ const Create = () => {
   const [title, setTitle] = useState("");
   const [method, setMethod] = useState("");
   const [cookingTime, setCookingTime] = useState("");
+  const [newIngredient, setNewIngredient] = useState("");
+  const [ingredients, setIngredients] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(title, method, cookingTime);
+  };
+
+  const handleAddIngredient = (e) => {
+    e.preventDefault();
   };
 
   return (
@@ -26,6 +32,21 @@ const Create = () => {
             required
           />
         </label>
+
+        <label>
+          <span>Recipe ingredients:</span>
+          <div className="ingredients">
+            <input
+              type="text"
+              value={newIngredient}
+              onchange={(e) => setNewIngredient(e.target.value)}
+            />
+            <button type="button" className="btn" onClick={handleAddIngredient}>
+              Add
+            </button>
+          </div>
+        </label>
+
         <label>
           <span>Recipe method:</span>
           <textarea
