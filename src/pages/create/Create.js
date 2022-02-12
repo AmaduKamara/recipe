@@ -17,6 +17,12 @@ const Create = () => {
 
   const handleAddIngredient = (e) => {
     e.preventDefault();
+    const ing = newIngredient.trim();
+
+    if (ing && !ingredients.includes(ing)) {
+      setIngredients((prevIngredient) => [...prevIngredient, ing]);
+    }
+    setNewIngredient("");
   };
 
   return (
