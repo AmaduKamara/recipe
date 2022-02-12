@@ -12,10 +12,10 @@ Amadu Kamara (Amkam)
 
 ### To get started:
 
-`git clone https://github.com/AmaduKamara/recipe`
-`cd recipe`
+- `git clone https://github.com/AmaduKamara/recipe`
+- `cd recipe`
 
 ### In the project directory, you can run
-`npm install` to install all dependencies
-`json-server --watch ./data/db.json` to load the json-server data on localhost:3000
-Then run `npm start` and hit `Y` to allow it to load in port 3001
+- `npm install` to install all dependencies
+- `json-server --watch ./data/db.json` to load the json-server data on localhost:3000
+- Then run `npm start` and hit `Y` to allow it to load in port 3001
