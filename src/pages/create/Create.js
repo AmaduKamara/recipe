@@ -3,6 +3,8 @@ import { useRef, useState } from "react";
 
 import "./Create.css";
 import { useFetch } from "./../../hooks/useFetch";
+import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -11,6 +13,8 @@ const Create = () => {
   const [newIngredient, setNewIngredient] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const ingredientInput = useRef(null);
+
+  const history = useHistory();
 
   const { postData, data, error } = useFetch(
     "http://localhost:3000/recipes",
@@ -27,6 +31,13 @@ const Create = () => {
       cookingTime: cookingTime + " minutes",
     });
   };
+
+  // redirect user after post response
+  useEffect(() => {
+    if (data) {
+      history.push("/");
+    }
+  }, [data, history]);
 
   const handleAddIngredient = (e) => {
     e.preventDefault();

@@ -47,6 +47,17 @@
       "method": "Cook with afriga",
       "cookingTime": "21 minutes",
       "id": "yr2l2xe"
+    },
+    {
+      "title": "Pizza",
+      "ingredients": [
+        "milk",
+        "banana",
+        "plantain"
+      ],
+      "method": "Cook in kitchen",
+      "cookingTime": "45 minutes",
+      "id": "6AULp3Q"
     }
   ]
 }
