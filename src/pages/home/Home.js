@@ -1,7 +1,7 @@
-import "./Home.css";
-import { useFetch } from "./../../hooks/useFetch";
-
+import { useFetch } from "../../hooks/useFetch";
 import RecipeList from "../../components/RecipeList";
+
+import "./Home.css";
 
 const Home = () => {
   const { data, isPending, error } = useFetch("http://localhost:3000/recipes");
