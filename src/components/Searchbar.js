@@ -22,7 +22,7 @@ const Searchbar = () => {
         </label>
         <input
           type="text"
-          value=""
+          value={term}
           id="search"
           placeholder="Search a recipe"
           onChange={(e) => setTerm(e.target.value)}
