@@ -57,6 +57,12 @@ const Create = () => {
             </button>
           </div>
         </label>
+        <p>
+          Current ingredients:{" "}
+          {ingredients.map((i) => (
+            <em key={i}>{i}, </em>
+          ))}
+        </p>
 
         <label>
           <span>Recipe method:</span>
