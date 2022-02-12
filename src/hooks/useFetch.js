@@ -17,7 +17,6 @@ export const useFetch = (url) => {
           throw new Error(res.statusText);
         }
         const data = await res.json();
-        console.log(data);
 
         setIsPending(false);
         setData(data);
