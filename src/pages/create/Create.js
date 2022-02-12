@@ -1,5 +1,5 @@
 // styles
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import "./Create.css";
 
@@ -9,10 +9,11 @@ const Create = () => {
   const [cookingTime, setCookingTime] = useState("");
   const [newIngredient, setNewIngredient] = useState("");
   const [ingredients, setIngredients] = useState([]);
+  const ingredientInput = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title, method, cookingTime);
+    console.log(title, method, cookingTime, ingredients);
   };
 
   const handleAddIngredient = (e) => {
@@ -23,6 +24,9 @@ const Create = () => {
       setIngredients((prevIngredient) => [...prevIngredient, ing]);
     }
     setNewIngredient("");
+
+    // Set focus on the ingredient input field after add an ingredient
+    ingredientInput.current.focus();
   };
 
   return (
@@ -45,7 +49,8 @@ const Create = () => {
             <input
               type="text"
               value={newIngredient}
-              onchange={(e) => setNewIngredient(e.target.value)}
+              onChange={(e) => setNewIngredient(e.target.value)}
+              ref={ingredientInput}
             />
             <button type="button" className="btn" onClick={handleAddIngredient}>
               Add
