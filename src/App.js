@@ -4,11 +4,12 @@ import Home from "./pages/home/Home";
 import Create from "./pages/create/Create";
 import Search from "./pages/search/Search";
 import Recipe from "./pages/recipe/Recipe";
+
+import Navbar from "./components/Navbar";
 import ThemeSelector from "./components/ThemeSelector";
 
 // Styles
 import "./App.css";
-import Navbar from "./components/Navbar";
 
 function App() {
   return (
