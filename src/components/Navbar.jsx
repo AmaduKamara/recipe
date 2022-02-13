@@ -5,11 +5,11 @@ import "./Navbar.css";
 import Searchbar from "./Searchbar";
 
 function Navbar() {
-  const { color } = useTheme();
+  const { color, changeColor } = useTheme();
 
   return (
     <div className="navbar" style={{ background: color }}>
-      <nav>
+      <nav onClick={() => changeColor("pink")}>
         <Link to="/" className="brand">
           <h1>Cooking Avenger</h1>
         </Link>

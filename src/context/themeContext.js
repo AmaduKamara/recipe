@@ -3,6 +3,7 @@ import { createContext, useReducer } from "react";
 // create and export the context
 export const ThemeContext = createContext();
 
+// Reducer
 const themeReducer = (state, action) => {
   switch (action.type) {
     case "CHANGE_COLOR":
@@ -18,6 +19,7 @@ export const ThemeProvider = ({ children }) => {
     color: "teal",
   });
 
+  // Action
   const changeColor = (color) => {
     dispatch({
       type: "CHANGE_COLOR",
