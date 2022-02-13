@@ -14,12 +14,19 @@ const ThemeSelector = () => {
     changeMode(mode === "dark" ? "light" : "dark");
   };
 
-  console.log(mode);
+  // console.log(mode);
 
   return (
     <div className="theme-selector">
       <div className="mode-toggle">
-        <img src={modeIcon} alt="Mode icon" onClick={toggleMode} />
+        <img
+          src={modeIcon}
+          alt="Mode icon"
+          onClick={toggleMode}
+          style={{
+            filter: mode === "dark" ? "invert(100%)" : "invert(20%)",
+          }}
+        />
       </div>
       <div className="theme-buttons">
         {themeColors.map((color) => (
