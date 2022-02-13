@@ -16,7 +16,7 @@ const themeReducer = (state, action) => {
 // create the context component
 export const ThemeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(themeReducer, {
-    color: "teal",
+    color: "#58249c",
   });
 
   // Action
