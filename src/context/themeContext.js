@@ -6,7 +6,7 @@ export const ThemeContext = createContext();
 // create the context component
 export const ThemeProvider = ({ children }) => {
   return (
-    <ThemeContext.Provider value={{ color: "blue" }}>
+    <ThemeContext.Provider value={{ color: "teal" }}>
       {children}
     </ThemeContext.Provider>
   );
