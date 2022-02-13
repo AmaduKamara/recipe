@@ -20,7 +20,23 @@ const Home = () => {
       .collection("recipes")
       .get()
       .then((snapshot) => {
-        console.log(snapshot);
+        // console.log(snapshot);
+        if (snapshot.empty) {
+          setError("No recipes to load");
+          setIsPending(false);
+        } else {
+          let results = [];
+          snapshot.docs.forEach((doc) => {
+            // console.log(doc);
+            results.push({ id: doc.id, ...doc.data() });
+          });
+          setData(results);
+          setIsPending(false);
+        }
+      })
+      .catch((error) => {
+        setError(error.message);
+        setIsPending(false);
       });
   }, []);
 
