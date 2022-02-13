@@ -7,8 +7,7 @@ Amadu Kamara (Amkam)
 
 ## App screenshot
 
-![image](https://user-images.githubusercontent.com/50941074/153712107-c975dd48-a54a-4e17-ac6c-a6cbc0bc40c6.png)
-
+![image](https://user-images.githubusercontent.com/50941074/153770092-9f70f0ac-ae42-406f-9ecc-f755154aa87a.png)
 
 ### To get started:
 
