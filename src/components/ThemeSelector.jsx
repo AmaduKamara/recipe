@@ -4,7 +4,7 @@ import { useTheme } from "../hooks/useTheme";
 
 import "./ThemeSelector.css";
 
-const themeColors = ["#58249c", "teal", "orange"];
+const themeColors = ["teal", "#58249c", "orange"];
 
 const ThemeSelector = () => {
   const { changeColor } = useTheme();
@@ -15,7 +15,7 @@ const ThemeSelector = () => {
         {themeColors.map((color) => (
           <div
             key={color}
-            onClick={changeColor(color)}
+            onClick={() => changeColor(color)}
             style={{ background: color }}
           />
         ))}
